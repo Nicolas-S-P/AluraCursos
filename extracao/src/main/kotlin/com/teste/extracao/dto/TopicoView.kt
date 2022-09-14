@@ -1,6 +1,6 @@
-package br.com.alura.forum.dto
+package com.teste.extracao.dto
 
-import br.com.alura.forum.model.StatusTopico
+import com.teste.extracao.model.StatusTopico
 import java.time.LocalDateTime
 
 data class TopicoView(

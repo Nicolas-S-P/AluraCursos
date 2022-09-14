@@ -1,4 +1,4 @@
-package br.com.alura.forum.dto
+package com.teste.extracao.dto
 
 import java.time.LocalDateTime
 

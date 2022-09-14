@@ -1,10 +1,8 @@
-package br.com.alura.forum.service
+package com.teste.extracao.service
 
-import br.com.alura.forum.model.Curso
-import br.com.alura.forum.model.Usuario
-import br.com.alura.forum.repository.UsuarioRepository
+import com.teste.extracao.model.Usuario
+import com.teste.extracao.repository.UsuarioRepository
 import org.springframework.stereotype.Service
-import java.util.*
 
 @Service
 class UsuarioService (private val repository: UsuarioRepository) {

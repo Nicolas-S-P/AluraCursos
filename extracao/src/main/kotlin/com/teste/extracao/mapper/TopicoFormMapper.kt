@@ -1,15 +1,15 @@
-package br.com.alura.forum.mapper
+package com.teste.extracao.mapper
 
-import br.com.alura.forum.dto.NovoTopicoForm
-import br.com.alura.forum.model.Topico
-import br.com.alura.forum.service.CursoService
-import br.com.alura.forum.service.UsuarioService
+import com.teste.extracao.dto.NovoTopicoForm
+import com.teste.extracao.model.Topico
+import com.teste.extracao.service.CursoService
+import com.teste.extracao.service.UsuarioService
 import org.springframework.stereotype.Component
 
 @Component
 class TopicoFormMapper(
-        private val cursoService: CursoService,
-        private val usuarioService: UsuarioService
+    private val cursoService: CursoService,
+    private val usuarioService: UsuarioService
 ): Mapper<NovoTopicoForm, Topico> {
     override fun map(t: NovoTopicoForm): Topico {
         return Topico(

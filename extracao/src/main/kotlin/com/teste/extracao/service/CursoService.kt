@@ -1,9 +1,8 @@
-package br.com.alura.forum.service
+package com.teste.extracao.service
 
-import br.com.alura.forum.model.Curso
-import br.com.alura.forum.repository.CursoRepository
+import com.teste.extracao.model.Curso
+import com.teste.extracao.repository.CursoRepository
 import org.springframework.stereotype.Service
-import java.util.*
 
 @Service
 class CursoService(private val repository: CursoRepository) {

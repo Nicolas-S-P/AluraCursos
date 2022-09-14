@@ -1,4 +1,4 @@
-package br.com.alura.forum.exception
+package com.teste.extracao.exception
 
 import java.lang.RuntimeException
 

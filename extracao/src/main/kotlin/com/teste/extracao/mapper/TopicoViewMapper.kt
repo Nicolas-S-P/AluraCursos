@@ -1,7 +1,7 @@
-package br.com.alura.forum.mapper
+package com.teste.extracao.mapper
 
-import br.com.alura.forum.dto.TopicoView
-import br.com.alura.forum.model.Topico
+import com.teste.extracao.dto.TopicoView
+import com.teste.extracao.model.Topico
 import org.springframework.stereotype.Component
 
 @Component

@@ -1,10 +1,10 @@
-package br.com.alura.forum.controller
+package com.teste.extracao.controller
 
-import br.com.alura.forum.dto.AtualizacaoTopicoForm
-import br.com.alura.forum.dto.NovoTopicoForm
-import br.com.alura.forum.dto.TopicoPorCategoriaDto
-import br.com.alura.forum.dto.TopicoView
-import br.com.alura.forum.service.TopicoService
+import com.teste.extracao.dto.AtualizacaoTopicoForm
+import com.teste.extracao.dto.NovoTopicoForm
+import com.teste.extracao.dto.TopicoPorCategoriaDto
+import com.teste.extracao.dto.TopicoView
+import com.teste.extracao.service.TopicoService
 import org.springframework.cache.annotation.CacheEvict
 import org.springframework.cache.annotation.Cacheable
 import org.springframework.data.domain.Page
@@ -17,7 +17,6 @@ import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.util.UriComponentsBuilder
 import javax.validation.Valid
-import javax.validation.constraints.NotNull
 
 @RestController
 @RequestMapping("/topicos")
@@ -41,8 +40,8 @@ class TopicoController(private val service: TopicoService) {
     @Transactional
     @CacheEvict(value = ["topicos"], allEntries = true)
     fun cadastrar(
-            @RequestBody @Valid form: NovoTopicoForm,
-            uriBuilder: UriComponentsBuilder
+        @RequestBody @Valid form: NovoTopicoForm,
+        uriBuilder: UriComponentsBuilder
     ): ResponseEntity<TopicoView> {
         val topicoView = service.cadastrar(form)
         val uri = uriBuilder.path("/topicos/${topicoView.id}").build().toUri()

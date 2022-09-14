@@ -1,4 +1,4 @@
-package br.com.alura.forum.model
+package com.teste.extracao.model
 
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue

@@ -1,4 +1,4 @@
-package br.com.alura.forum.mapper
+package com.teste.extracao.mapper
 
 interface Mapper<T, U> {
 
